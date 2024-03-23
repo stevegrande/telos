@@ -4,14 +4,16 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::inertia('/Welcome', 'Welcome');
+Route::inertia('/MissionVision', 'MissionVision');
+Route::inertia('/AboutUs', 'AboutUs');
+Route::inertia('/ContactUs', 'ContactUs');
+Route::inertia('/KeyBehaviours', 'KeyBehaviours');
+Route::inertia('/CoreValues', 'CoreValues');
+Route::inertia('/OurTeam', 'OurTeam');
+Route::inertia('/SectorOverview', 'SectorOverview');
+Route::inertia('/IndigenousRelations', 'IndigenousRelations');
+Route::inertia('/ContactUs', 'ContactUs');
 
 Route::middleware([
     'auth:sanctum',
