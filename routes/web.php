@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+Route::inertia('/', 'Welcome');
 Route::inertia('/Welcome', 'Welcome');
 Route::inertia('/MissionVision', 'MissionVision');
 Route::inertia('/AboutUs', 'AboutUs');
